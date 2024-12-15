@@ -1,0 +1,27 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: Inter;
+  background-image: url(/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#root h1{
+  font-size: 4rem;
+  margin: 10px;
+}
+#root h4{
+  font-size: 2rem;
+  margin: 10px;
+}
