@@ -6,7 +6,6 @@ body{
 header{
   background-color: #BE0000;
   color: white;
-  border: 2px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,3 +27,15 @@ header ul li:hover{
   transform: scale(1.2);
   transition-duration: 0.5s;
 } 
+main{
+  background-image: url(/public/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
