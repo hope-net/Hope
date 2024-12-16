@@ -30,6 +30,7 @@ header ul li:hover{
   color: gray;
   transform: scale(1.2);
   transition-duration: 0.5s;
+  cursor: pointer;
 } 
 main{
   background-color: #BE0000;
@@ -38,7 +39,7 @@ main{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  height: 650px;
 }
 main h1:first-child{
   font-size: 5rem;
@@ -65,16 +66,36 @@ main button:hover{
   border: none;
   background-color: white;
   color: #BE0000;
+  cursor: pointer;
 }
 main h1:first-child::after{
-  content: "!";
+  content: "/>";
   margin-left: 10px;
   font-size: 6rem;
-  animation-name: show;
-  animation-duration: 5s;
+  animation-name: showafter;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-@keyframes show {
+main h1:first-child::before{
+  content: "<";
+  margin-right: 10px;
+  font-size: 6rem;
+  animation-name: showbefore;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes showbefore {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes showafter {
   0%{
     opacity: 0;
   }
