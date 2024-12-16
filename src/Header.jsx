@@ -1,7 +1,7 @@
 export default function Header(){
     return(
         <header>
-            <div></div>
+            <div><img src="/lorem.png" alt="" /></div>
             <ul>
                 <li>Home</li>
                 <li>Contribute</li>
