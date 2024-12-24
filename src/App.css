@@ -3,17 +3,86 @@ body{
   padding: 0px;
   font-family: Inter;
 }
+.preloaderContainer{
+  background-color: #bf1616;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.preloaderLogoContainer{
+  height:0px;
+  width: fit-content;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); 
+  perspective: 1000px;  
+  animation: scaleup 3s linear;
+}
+.preloaderLogo{
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+  animation: flip 1500ms 2  linear;
+}
+.loaderContainer{
+  height: 0.5%;
+  width: 60%;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.loading{
+  height: 100%;
+  width: 0%;
+  background-color: #ffffff;
+  animation: load 3s;
+}
+@keyframes scaleup {
+  0% {
+    height: 0px;
+  }
+  15%{
+    height: 250px;
+  }
+  85%{
+    height: 250px;
+  }
+  100%{
+    height: 0px;
+  }
+}
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 header{
-  background-color: #BE0000;
+  background-color: #bf1616;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:20px 80px 0px;
+  padding:0px 80px;
 }
 header div{
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width:fit-content;
   overflow: hidden;
 }
 header div img{
@@ -33,7 +102,7 @@ header ul li:hover{
   cursor: pointer;
 } 
 .home-intro{
-  background-color: #BE0000;
+  background-color: #bf1616;
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,17 +110,23 @@ header ul li:hover{
   justify-content: center;
   height: 650px;
 }
-.home-intro h1:first-child{
+.home-intro h1{
   font-size: 5rem;
-  margin: 20px 0px 30px 0px;
+  margin: 20px 0 30px;
+}
+.home-intro h4 {
+  font-size: 2rem;
+}
+.home-intro h5 {
+  font-size: 1rem;
 }
 .home-intro button{
   border:none;
   color:white;
-  background-color: #BE0000;
-  width: 130px;
-  height: 50px;
-  font-size: 20px;
+  background-color: #bf1616;
+  width: 150px;
+  height: 60px;
+  font-size: 25px;
   font-family: Inter;
   border-radius: 10px;
   border :2px solid white;
@@ -60,49 +135,11 @@ header ul li:hover{
 .home-intro button::after{
   content: ' >';
   font-family: Inter;
-  font-size: 20px;
+  font-size: 25px;
 }
 .home-intro button:hover{
   border: none;
   background-color: white;
-  color: #BE0000;
+  color: #bf1616;
   cursor: pointer;
-}
-.home-intro h1:first-child::after{
-  content: "/>";
-  margin-left: 10px;
-  font-size: 6rem;
-  animation-name: showafter;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.home-intro h1:first-child::before{
-  content: "<";
-  margin-right: 10px;
-  font-size: 6rem;
-  animation-name: showbefore;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-@keyframes showbefore {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-@keyframes showafter {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
 }
