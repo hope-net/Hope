@@ -5,19 +5,18 @@ import Preloader from './Preloader.jsx';
 
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAppVisible, setIsAppVisible] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
 
   const handlePreloaderComplete = () => {
-    setIsLoading(false);
-    setIsAppVisible(true);
-  };
-
+    setIsLoading(false)
+      setFadeIn(true)
+  }
   return (
     <>
       {isLoading ? (
         <Preloader onComplete={handlePreloaderComplete} />
       ) : (
-        <App/>
+        <App className={fadeIn ? "fadeIn" : ""}/>
       )}
     </>
   );
