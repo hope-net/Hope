@@ -10,6 +10,7 @@ export default function Preloader({onComplete}) {
         </div>
         <div className="loaderContainer">
         <div className="loading" onAnimationEnd={handleAnimationEnd}></div>
+        <img className="pen" src="/pen.png" alt="pen" />
         </div>
         </main>
     )

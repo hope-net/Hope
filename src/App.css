@@ -35,12 +35,28 @@ body{
   top: 70%;
   left: 50%;
   transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .loading{
   height: 100%;
   width: 0%;
   background-color: #ffffff;
-  animation: load 3s;
+  animation: load 3s forwards;
+}
+.pen {
+  transform: translate(-40%,-30%);
+  height: 30px; 
+  animation: penMove 3s forwards; 
+}
+@keyframes penMove {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 @keyframes scaleup {
   0% {
@@ -112,7 +128,21 @@ header ul li:hover{
 }
 .home-intro h1{
   font-size: 5rem;
-  margin: 20px 0 30px;
+  overflow: hidden; 
+  border-right: .15em solid rgb(255, 255, 255); 
+  white-space: nowrap;
+  margin: 0 auto; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 65% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
 }
 .home-intro h4 {
   font-size: 2rem;
