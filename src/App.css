@@ -30,7 +30,7 @@ body{
 }
 .loaderContainer{
   height: 0.5%;
-  width: 60%;
+  width: 50%;
   position: fixed;
   top: 70%;
   left: 50%;
@@ -46,8 +46,8 @@ body{
   animation: load 3s forwards;
 }
 .pen {
-  transform: translate(-40%,-30%);
-  height: 30px; 
+  transform: translate(-38%,-30%);
+  height: 50px; 
   animation: penMove 3s forwards; 
 }
 @keyframes penMove {
