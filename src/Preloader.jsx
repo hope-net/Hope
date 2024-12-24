@@ -1,7 +1,7 @@
 
 export default function Preloader({onComplete}) {
     const handleAnimationEnd = () => {
-        // onComplete()
+        onComplete()
       }
     return(
         <main className="preloaderContainer">
