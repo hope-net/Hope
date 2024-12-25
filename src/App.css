@@ -111,6 +111,10 @@ header div{
   width:fit-content;
   overflow: hidden;
 }
+header div:hover{
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
 header div img{
   width: 100%;
   height: 100%;
@@ -122,7 +126,7 @@ header ul{
   list-style: none;
 }
 header ul li:hover{
-  color: gray;
+  color: rgb(0, 0, 0);
   transform: scale(1.2);
   transition-duration: 0.5s;
   cursor: pointer;
@@ -181,5 +185,111 @@ header ul li:hover{
   border: none;
   background-color: white;
   color: #bf1616;
+  transform: scale(1.1);
+  transition-duration: 1s;
   cursor: pointer;
+}
+.home-about{
+  background-color: #ffffff;
+  padding: 100px 100px 50px;
+}
+.home-about h1{
+    margin: 0px;
+    font-size: 2.5rem;
+}
+.home-about article{
+  display: flex;
+}
+.home-about article img{
+  width: 350px;
+  margin: 0px 100px;
+  border-radius: 10px;
+}
+.home-about article p{
+  width: 60%;
+  font-size: 1rem;
+  align-self: center;
+}
+.scheme-more{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 50px 100px 100px;
+}
+.scheme-more h1{
+  font-size: 2.5rem;
+}
+.scheme{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0px 150px;
+}
+.scheme .buttons button{
+  border-radius: 10px;
+  border: 2px solid #bf1616;
+  color: #bf1616; 
+  width: 150px;
+  height: fit-content;
+  display: flex;
+  padding: 15px 10px;
+  margin: 50px 0px 25px;
+}
+.scheme .buttons{
+  display: flex;
+  flex-direction: column;
+}
+.scheme .buttons button:hover{
+  border: 2px solid #ffffff;
+  color: #ffffff; 
+  background-color: #bf1616;
+  transition-duration: 1s;
+  transform: scale(1.1);
+}
+.scheme .buttons button div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  font-family: Inter;
+  font-size: 1rem;
+}
+.scheme .buttons button::after{
+  content: ">";
+  font-size: 2rem;
+}
+.scheme img{
+  width: 300px;
+  border-radius: 10px;
+}
+.more{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.more div img{
+  margin: 10px;
+  width: 240px;
+  height: 260px;
+  border-radius: 10px;
+}
+.more div{
+  width: 260px;
+  margin: 50px 0px;
+}
+.more div p{
+  margin: 0px 10px;
+  font-size: 1rem;
+}
+footer{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+footer img{
+  width:75px;
 }
