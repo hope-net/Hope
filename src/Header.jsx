@@ -6,7 +6,8 @@ export default function Header(){
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Contact Us</li>
-                <li>Contribute</li>
+                <li>CodeXpert</li>
+                <li>Contribute To Hope</li>
             </ul>
         </header>
     )

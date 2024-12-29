@@ -123,13 +123,13 @@ header div img{
 header ul{
   display: flex;
   justify-content: space-evenly;
-  width: 500px;
+  width: 50%;
   list-style: none;
 }
 header ul li:hover{
   color: rgb(0, 0, 0);
   transform: scale(1.2);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   cursor: pointer;
 } 
 .home-intro{
@@ -273,12 +273,12 @@ header ul li:hover{
 }
 .more div img{
   margin: 10px;
-  width: 240px;
-  height: 260px;
+  width: 200px;
+  height: 220px;
   border-radius: 10px;
 }
 .more div{
-  width: 260px;
+  width: 220px;
   margin: 50px 0px;
   cursor: pointer;
 }
@@ -324,7 +324,7 @@ footer{
   transition-duration: 1s;
 }
 .socials i:hover{
-  transform: scale(1.5);
+  transform: scale(2);
   color: black;
 }
 footer hr{
@@ -335,11 +335,11 @@ footer hr{
 .footerContent ul{
   display: flex;
   justify-content: space-evenly;
-  width: 500px;
+  width: 60%;
   list-style: none;
 }
 .footerContent ul li:hover{
   transform: scale(1.2);
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   cursor: pointer;
 } 

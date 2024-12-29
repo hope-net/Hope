@@ -13,6 +13,7 @@ export default function Main(){
                 <div><img src="/Hope.jpg" alt="" /><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, provident.</p></div>
                 <div><img src="/Hope.jpg" alt="" /><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, provident.</p></div>
                 <div><img src="/Hope.jpg" alt="" /><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, provident.</p></div>
+                <div><img src="/Hope.jpg" alt="" /><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, provident.</p></div>
             </div>
         </main>
     )

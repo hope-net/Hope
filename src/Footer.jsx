@@ -6,8 +6,9 @@ export default function Footer() {
             <ul>
                 <li>About Us</li>
                 <li>Contact Us</li>
-                <li>Contribute</li>
-                <li>Donate</li>
+                <li>Schemes & Notes</li>
+                <li>CodeXpert</li>
+                <li>Contribute To Hope</li>
             </ul>
             </div>
             <hr />
