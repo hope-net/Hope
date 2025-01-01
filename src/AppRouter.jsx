@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
@@ -9,6 +10,13 @@ import Scheme2019 from "./Components/Scheme2019";
 import Scheme2024 from "./Components/Scheme2024";
 
 export default function AppRouter() {
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, [location.pathname]); // Dependency on pathname, triggers whenever the route changes
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
