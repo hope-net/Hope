@@ -1,16 +1,16 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import Home from "./Home"
-import Main from "./Main"
+import Header from './Components/Header'; // Import the Header
+import Footer from './Components/Footer'; // Import Footer
+import AppRouter from './AppRouter'; // Import the AppRouter to handle the routes
+
 function App({ className }) {
   return (
-    <main className={className}>
-    <Header/>
-    <Home/>
-    <Main/>
-    <Footer/>
-    </main>
-  )
+    <div className={className}>
+      <Header /> {/* The Header will be part of the layout */}
+      <AppRouter /> {/* AppRouter will handle routing */}
+      <Footer /> {/* Footer can be part of the layout */}
+    </div>
+  );
 }
 
-export default App
+export default App;
+

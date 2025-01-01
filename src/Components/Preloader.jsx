@@ -1,4 +1,3 @@
-
 export default function Preloader({onComplete}) {
     const handleAnimationEnd = () => {
         onComplete()
