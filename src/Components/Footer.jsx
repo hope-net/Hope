@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
@@ -17,6 +17,12 @@ export default function Footer() {
       const schemeMoreSection = document.getElementById("scheme-more");
       if (schemeMoreSection) {
         schemeMoreSection.scrollIntoView({ behavior: "smooth" });
+      } else {
+        // Fallback, check if the hash is already set and scroll
+        if (window.location.hash === "#scheme-more") {
+          window.location.hash = ""; // Remove the hash and then set it again to trigger scroll
+          window.location.hash = "#scheme-more";
+        }
       }
     }, 100); // A small delay to ensure the navigation completes before scrolling
   };

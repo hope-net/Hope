@@ -343,8 +343,28 @@ footer{
 }
 .socials i:hover{
   transform: scale(2);
-  color: black;
 }
+.socials .fa-youtube:hover{
+  filter: brightness(0) saturate(100%) invert(16%) sepia(58%) saturate(4996%) hue-rotate(352deg) brightness(88%) contrast(97%);
+}
+.socials .fa-whatsapp:hover{
+  filter: brightness(0) saturate(100%) invert(29%) sepia(96%) saturate(2253%) hue-rotate(118deg) brightness(98%) contrast(101%);
+}
+.socials .fa-facebook:hover{
+  filter: brightness(0) saturate(100%) invert(38%) sepia(99%) saturate(5532%) hue-rotate(209deg) brightness(106%) contrast(104%);
+}
+.socials .fa-linkedin:hover{
+  filter: brightness(0) saturate(100%) invert(38%) sepia(99%) saturate(5532%) hue-rotate(209deg) brightness(106%) contrast(104%);
+}
+.socials .fa-instagram:hover{
+  filter: brightness(0) saturate(100%) invert(46%) sepia(100%) saturate(7484%) hue-rotate(310deg) brightness(96%) contrast(117%);
+}
+.socials .fa-envelope:hover{
+  filter: brightness(0) saturate(100%) invert(16%) sepia(58%) saturate(4996%) hue-rotate(352deg) brightness(88%) contrast(97%);
+  
+}
+
+
 footer hr{
   width: 50%;
   color: #ffffff;
