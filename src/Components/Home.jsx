@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null); // Keeps track of the hovered item
-  const schemeMoreRef = useRef(null);
-  const { hash } = useLocation();
   const navigate = useNavigate();
 
   const handleMouseEnter = (index) => {
@@ -15,19 +13,12 @@ export default function Home() {
     setHoveredIndex(null); // Reset when mouse leaves
   };
 
-  useEffect(() => {
-    if (hash === "#scheme-more") {
-      schemeMoreRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [hash]);
-
   const handleExploreClick = () => {
-    window.location.hash = "#scheme-more";
-    setTimeout(() => {
-      window.location.hash = ""; 
-    }, 10);
+      const schemeMoreSection = document.getElementById("scheme-more");
+      if (schemeMoreSection) {
+        schemeMoreSection.scrollIntoView({ behavior: "smooth" });
+      }
   };
-
 
   const navigateTo = (path) => {
     navigate(path); // Internal navigation
@@ -60,7 +51,7 @@ export default function Home() {
         </article>
       </section>
 
-      <main className="scheme-more" id="scheme-more" ref={schemeMoreRef}>
+      <main className="scheme-more" id="scheme-more">
         <h1>Scheme</h1>
         <div className="scheme">
           <div className="button-container">
@@ -89,6 +80,17 @@ export default function Home() {
             <p>Calculate Your CGPA/SGPA – Try Our Easy Calculator Now!</p>
           </div>
 
+          {/* Hover effect for YouTube link */}
+          <div
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+            className={`more-item ${hoveredIndex !== null && hoveredIndex !== 1 ? 'filtered' : ''}`}
+            onClick={() => openExternalLink("https://www.youtube.com/channel/UCnTT95XELoR38iN8Ax3klzg")}
+          >
+            <img src="/Youtube.jpg" alt="YouTube" />
+            <p>Explore Exciting and Entertaining Content – Uncover Stories, Ideas, and More!</p>
+          </div>
+
           {/* Hover effect for MNC */}
           <div
             onMouseEnter={() => handleMouseEnter(0)}
@@ -99,24 +101,13 @@ export default function Home() {
             <img src="/MNC.jpg" alt="MNC" />
             <p>Explore MNCs & Placements Opportunities – Learn More Here!</p>
           </div>
-
-          {/* Hover effect for YouTube link */}
-          <div
-            onMouseEnter={() => handleMouseEnter(1)}
-            onMouseLeave={handleMouseLeave}
-            className={`more-item ${hoveredIndex !== null && hoveredIndex !== 1 ? 'filtered' : ''}`}
-            onClick={() => openExternalLink("https://youtube.com")}
-          >
-            <img src="/Youtube.jpg" alt="YouTube" />
-            <p>Explore Hope’s YouTube Content – Boost Your Learning and Skills!</p>
-          </div>
-
+          
           {/* Hover effect for CodeXpert link */}
           <div
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
             className={`more-item ${hoveredIndex !== null && hoveredIndex !== 2 ? 'filtered' : ''}`}
-            onClick={() => openExternalLink("https://codexpert.com")}
+            onClick={() => openExternalLink("https://codexpertweb.netlify.app")}
           >
             <img src="/CodeXpert.jpg" alt="CodeXpert" />
             <p>Unlock Expert Programming Courses – Start Your Journey with CodeXpert Now!</p>

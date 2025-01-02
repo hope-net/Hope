@@ -1,5 +1,3 @@
-import Header from "./Header";
-import Footer from "./Footer";
 
 export default function About() {
   return (
@@ -30,8 +28,8 @@ export default function About() {
           to the right study materials. To achieve this, Hope curates and
           organizes existing high-quality resources, such as study notes,
           videos, previous year question papers, and the official syllabus, all
-          in one place. Whether you're in Computer Science, Mechanical Engineering, 
-          Civil Engineering, or any other branch, Hope is here
+          in one place. Whether you're in Computer Science, Electronics and Communication, 
+          Civil Engineering or any other branch, Hope is here
           to provide you with easy navigation links to all the resources you
           need for success.
         </p>

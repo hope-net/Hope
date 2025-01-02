@@ -116,6 +116,7 @@ nav ul{
   justify-content: space-evenly;
   width: 50%;
   list-style: none;
+  padding: 0px;
 }
 nav ul li:hover{
   color: rgb(0, 0, 0);
@@ -311,19 +312,26 @@ footer{
   color: #ffffff;
 }
 .footerContent{
-  padding: 20px 100px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 30px 100px;
 }
-.footerContent img{
+.footer-img img{
   width:100px;
   transition-duration: 1s;
   cursor: pointer;
 }
-.footerContent img:hover{
-  transform: scale(1.2)
+.footer-img img:hover{
+  transform: scale(1.2);
 }
+.footer-img{
+  padding:0px 50px;
+}
+.img-social{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-copyright{
   display: flex;
   flex-direction: column;
@@ -331,7 +339,7 @@ footer{
   align-items: center;
 }
 .socials{
-  width: 25%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -346,12 +354,6 @@ footer{
 }
 .socials .fa-youtube:hover{
   filter: brightness(0) saturate(100%) invert(16%) sepia(58%) saturate(4996%) hue-rotate(352deg) brightness(88%) contrast(97%);
-}
-.socials .fa-whatsapp:hover{
-  filter: brightness(0) saturate(100%) invert(29%) sepia(96%) saturate(2253%) hue-rotate(118deg) brightness(98%) contrast(101%);
-}
-.socials .fa-facebook:hover{
-  filter: brightness(0) saturate(100%) invert(38%) sepia(99%) saturate(5532%) hue-rotate(209deg) brightness(106%) contrast(104%);
 }
 .socials .fa-linkedin:hover{
   filter: brightness(0) saturate(100%) invert(38%) sepia(99%) saturate(5532%) hue-rotate(209deg) brightness(106%) contrast(104%);
@@ -372,13 +374,16 @@ footer hr{
 .footerContent ul{
   display: flex;
   justify-content: space-evenly;
-  width: 60%;
+  width: 100%;
   list-style: none;
+  padding: 0;
 }
+
 .footerContent ul li:hover{
-  transform: scale(1.2);
   transition-duration: 1s;
+  transform: scale(1.2);
   cursor: pointer;
+  color:#bf1616;
 } 
 .about-content {
   background-color: #f8f8f8;
@@ -482,7 +487,9 @@ footer hr{
   background-color: #bf1616;
   color: white;
 }
-
+.socials-container{
+  width: 25%;
+}
 .captcha {
   display: flex;
   margin: 20px;
@@ -602,6 +609,7 @@ footer hr{
   border-radius: 5px;
   text-align: center;
   padding: 10px 0px;
+  margin: 2%;
   transition-duration: 1s;
 }
 
@@ -620,6 +628,7 @@ footer hr{
   font-size: 1rem;
   background: #fff;
   padding: 1%;
+  margin: 2%;
   border-radius: 0.5rem;
   justify-content: center;
   color: black;

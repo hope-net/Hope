@@ -23,7 +23,7 @@ export default function Header() {
         <li onClick={() => navigateTo("/")}>Home</li> {/* Navigate to Home page */}
         <li onClick={() => navigateTo("/about")}>About Us</li> {/* Navigate to AboutUs page */}
         <li onClick={() => navigateTo("/contact")}>Contact Us</li> {/* Navigate to ContactUs page */}
-        <li onClick={() => openExternalLink("https://codexpert.com")}>CodeXpert</li> {/* External link */}
+        <li onClick={() => openExternalLink("https://codexpertweb.netlify.app")}>CodeXpert</li> {/* External link */}
         <li onClick={() => navigateTo("/contribute")}>Contribute To Hope</li> {/* Navigate to Contribute page */}
       </ul>
     </nav>
