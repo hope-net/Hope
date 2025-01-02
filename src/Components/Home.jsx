@@ -22,10 +22,12 @@ export default function Home() {
   }, [hash]);
 
   const handleExploreClick = () => {
-    // Force the page to scroll even if the URL already contains #scheme-more
-    window.location.hash = ""; // Remove the hash temporarily
-    window.location.hash = "#scheme-more"; // Set it again to trigger the scroll
+    window.location.hash = "#scheme-more";
+    setTimeout(() => {
+      window.location.hash = ""; 
+    }, 10);
   };
+
 
   const navigateTo = (path) => {
     navigate(path); // Internal navigation
