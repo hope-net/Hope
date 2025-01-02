@@ -21,11 +21,7 @@ export default function Contact(){
             <h2>Contact Us</h2>
             <p>If you have any questions or suggestions, feel free to reach out to us. We are here to help you!</p>
 
-            <form onSubmit={handleSubmit}
-            name="Contact-form" // Name attribute identifies the form
-            method="POST" // Required for the form to be handled by Netlify
-            data-netlify="true" // Tells Netlify to handle the form submission
-            >
+            <form onSubmit={handleSubmit} netlify>
               <label htmlFor="name">Name:</label>
               <input type="text" id="name" name="name" placeholder="Your name" required />
 
