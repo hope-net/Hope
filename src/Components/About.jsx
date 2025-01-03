@@ -1,5 +1,7 @@
-
 export default function About() {
+  const openExternalLink = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
       <section className="about-content">
         <h1>About Us</h1>
@@ -40,7 +42,7 @@ export default function About() {
     <li><span className="bold-text">Official Syllabus:</span> We offer the official syllabus for all engineering branches at KTU. This ensures that you always have a clear understanding of the topics you need to focus on for each subject and stay aligned with university requirements.</li>
     <li><span className="bold-text">Study Videos:</span> We provide links to high-quality educational videos covering a variety of subjects. These videos come from trusted platforms and help break down complex concepts, offering you an easier and more engaging way to learn.</li>
     <li><span className="bold-text">Previous Year Question Papers:</span> To assist with exam preparation, we offer direct access to previous year question papers. These are valuable resources for understanding the exam patterns and identifying key areas to focus on.</li>
-    <li><span className="bold-text">Programming Courses (CodeXpert):</span> In addition to the free study resources, we also offer premium programming courses through our programming training classes, CodeXpert. CodeXpert is run by the same team behind Hope and provides in-depth, paid programming courses in languages such as Python, Java, C#, and Web Development. These courses are designed to help you master coding skills through structured lessons, hands-on projects, and expert guidance. While Hope offers free access to study materials, CodeXpert focuses on providing specialized programming education for those who wish to further enhance their technical skills.</li>
+    <li><span onClick={() => openExternalLink("https://codexpertweb.netlify.app")} className="bold-text codeXpertlink">Programming Courses (CodeXpert):</span> In addition to the free study resources, we also offer premium programming courses through our programming training classes, CodeXpert. CodeXpert is run by the same team behind Hope and provides in-depth, paid programming courses in languages such as Python, Java, C#, and Web Development. These courses are designed to help you master coding skills through structured lessons, hands-on projects, and expert guidance. While Hope offers free access to study materials, CodeXpert focuses on providing specialized programming education for those who wish to further enhance their technical skills. Click CodeXpert to know more!</li>
 </ul>
 
 <h2>Why Hope?</h2>

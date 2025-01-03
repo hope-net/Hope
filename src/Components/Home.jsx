@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Keeps track of the hovered item
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const navigate = useNavigate();
 
   const handleMouseEnter = (index) => {
-    setHoveredIndex(index); // Set the hovered index
+    setHoveredIndex(index); 
   };
 
   const handleMouseLeave = () => {
-    setHoveredIndex(null); // Reset when mouse leaves
+    setHoveredIndex(null);
   };
 
   const handleExploreClick = () => {
@@ -21,11 +21,11 @@ export default function Home() {
   };
 
   const navigateTo = (path) => {
-    navigate(path); // Internal navigation
+    navigate(path);
   };
 
   const openExternalLink = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer'); // External link
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -69,7 +69,6 @@ export default function Home() {
         </div>
 
         <div className="more">
-          {/* Hover effect for Calculator */}
           <div
             onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
@@ -79,8 +78,6 @@ export default function Home() {
             <img src="/Calculator.jpg" alt="Calculator" />
             <p>Calculate Your CGPA/SGPA – Try Our Easy Calculator Now!</p>
           </div>
-
-          {/* Hover effect for YouTube link */}
           <div
             onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
@@ -90,8 +87,6 @@ export default function Home() {
             <img src="/Youtube.jpg" alt="YouTube" />
             <p>Explore Exciting and Entertaining Content – Uncover Stories, Ideas, and More!</p>
           </div>
-
-          {/* Hover effect for MNC */}
           <div
             onMouseEnter={() => handleMouseEnter(0)}
             onMouseLeave={handleMouseLeave}
@@ -101,8 +96,6 @@ export default function Home() {
             <img src="/MNC.jpg" alt="MNC" />
             <p>Explore MNCs & Placements Opportunities – Learn More Here!</p>
           </div>
-          
-          {/* Hover effect for CodeXpert link */}
           <div
             onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}

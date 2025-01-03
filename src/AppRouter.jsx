@@ -12,11 +12,9 @@ import Scheme2024 from "./Components/Scheme2024";
 export default function AppRouter() {
   const location = useLocation();
 
-  // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location.pathname]); // Dependency on pathname, triggers whenever the route changes
-
+    window.scrollTo(0, 0); 
+  }, [location.pathname]);
   return (
     <Routes>
       <Route path="/" element={<Home />} />

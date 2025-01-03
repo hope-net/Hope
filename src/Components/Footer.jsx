@@ -3,30 +3,25 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
 
-  // Handler for internal navigation
   const navigateTo = (path) => {
     navigate(path);
   };
 
-  // Handler for scrolling to "Scheme and More" section after navigating to the home page
   const navigateAndScrollToSchemeMore = () => {
-    navigate("/"); // Navigate to Home page
+    navigate("/"); 
     setTimeout(() => {
-      // Scroll to the "scheme-more" section after the navigation
       const schemeMoreSection = document.getElementById("scheme-more");
       if (schemeMoreSection) {
         schemeMoreSection.scrollIntoView({ behavior: "smooth" });
       } else {
-        // Fallback, check if the hash is already set and scroll
         if (window.location.hash === "#scheme-more") {
-          window.location.hash = ""; // Remove the hash and then set it again to trigger scroll
+          window.location.hash = ""; 
           window.location.hash = "#scheme-more";
         }
       }
-    }, 100); // A small delay to ensure the navigation completes before scrolling
+    }, 100);
   };
 
-  // Handler for external links (CodeXpert)
   const openExternalLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -35,12 +30,12 @@ export default function Footer() {
     <footer>
       <div className="footerContent">
         <ul>
-          <li onClick={() => navigateTo("/")}>Home</li> {/* Navigate to Home page */}
-          <li onClick={() => navigateTo("/about")}>About Us</li> {/* Navigate to About Us page */}
-          <li onClick={() => navigateTo("/contact")}>Contact Us</li> {/* Navigate to Contact Us page */}
-          <li onClick={navigateAndScrollToSchemeMore}>Schemes & Notes</li> {/* Navigate to Home and scroll to scheme-more */}
-          <li onClick={() => openExternalLink("https://codexpertweb.netlify.app")}>CodeXpert</li> {/* External link */}
-          <li onClick={() => navigateTo("/contribute")}>Contribute To Hope</li> {/* Navigate to Contribute page */}
+          <li onClick={() => navigateTo("/")}>Home</li> 
+          <li onClick={() => navigateTo("/about")}>About Us</li> 
+          <li onClick={() => navigateTo("/contact")}>Contact Us</li> 
+          <li onClick={navigateAndScrollToSchemeMore}>Schemes & Notes</li> 
+          <li onClick={() => openExternalLink("https://codexpertweb.netlify.app")}>CodeXpert</li> 
+          <li onClick={() => navigateTo("/contribute")}>Contribute To Hope</li>
         </ul>
       </div>
       <hr />
