@@ -51,15 +51,15 @@ const curriculumData19 = {
     },
     ComputerScienceAndEngineering: {
       1: [
-        { code: 'MAT101', name: 'Linear Algebra & Calculus' },
-        { code: 'PHT100', name: 'Engineering Physics A' },
-        { code: 'PHT110', name: 'Engineering Physics B' },
-        { code: 'CYT100', name: 'Engineering Chemistry' },
-        { code: 'EST100', name: 'Engineering Mechanics' },
-        { code: 'EST110', name: 'Engineering Graphics' },
-        { code: 'EST120', name: 'Basics of Civil & Mechanical Engineering' },
-        { code: 'EST130', name: 'Basics of Electrical & Electronics Engineering' },
-        { code: 'HUN101', name: 'Life Skills' }
+      { code: 'MAT101', name: 'Linear Algebra & Calculus', drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''}},
+      { code: 'PHT100', name: 'Engineering Physics A', drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'PHT110', name: 'Engineering Physics B', drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'CYT100', name: 'Engineering Chemistry', drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'EST100', name: 'Engineering Mechanics', drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'EST110', name: 'Engineering Graphics',  drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'EST120', name: 'Basics of Civil & Mechanical Engineering',  drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'EST130', name: 'Basics of Electrical & Electronics Engineering',  drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} },
+      { code: 'HUN101', name: 'Life Skills',  drivelinks:{syllabus:'',notes:'',qpaper:'',text:'',videoclasses:''} }
       ],
       2: [],
       3: [],
