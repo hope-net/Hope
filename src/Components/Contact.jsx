@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com'; 
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false); // State for success popup
+  const [showErrorPopup, setShowErrorPopup] = useState(false); // State for error popup
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
@@ -18,16 +19,25 @@ export default function Contact() {
         (response) => {
           console.log('SUCCESS!', response); 
           setIsSubmitted(true); 
+          setShowSuccessPopup(true); // Show success popup
           e.target.reset();
         },
         (error) => {
-          alert("Failed to submit. Please contact hope2025contact@gmail.com") 
+          setShowErrorPopup(true); // Show error popup on failure
         }
       );
   };
 
   const openLink = (url) => {
     window.open(url, '_blank');
+  };
+
+  const closeSuccessPopup = () => {
+    setShowSuccessPopup(false); // Close the success popup
+  };
+
+  const closeErrorPopup = () => {
+    setShowErrorPopup(false); // Close the error popup
   };
 
   return (
@@ -57,73 +67,79 @@ export default function Contact() {
             <input type="checkbox" required />
             <p>Confirm the information provided to help us assist you better.</p>
           </div>
-<div className='socials-container'>
-          <div className="socials">
-            <i
-              className="fa-brands fa-instagram nav-icon"
-              onClick={() => openLink('https://www.instagram.com/hope_ktu')}
-            ></i>
-            <i
-              className="fa-regular fa-envelope nav-icon"
-              onClick={() => openLink('https://mail.google.com/mail/?view=cm&fs=1&to=hope2025contact@gmail.com')}
-            ></i>
-            <i
-              className="fa-brands fa-linkedin nav-icon"
-              onClick={() => openLink('"https://linkedin.com/company/hopektu"')}
-            ></i>
-            <i
-              className="fa-brands fa-youtube nav-icon"
-              onClick={() => openLink('https://www.youtube.com/channel/UCnTT95XELoR38iN8Ax3klzg')}
-            ></i>
-          </div>
+
+          <div className='socials-container'>
+            <div className="socials">
+              <i
+                className="fa-brands fa-instagram nav-icon"
+                onClick={() => openLink('https://www.instagram.com/hope_ktu')}
+              ></i>
+              <i
+                className="fa-regular fa-envelope nav-icon"
+                onClick={() => openLink('https://mail.google.com/mail/?view=cm&fs=1&to=hope2025contact@gmail.com')}
+              ></i>
+              <i
+                className="fa-brands fa-linkedin nav-icon"
+                onClick={() => openLink('"https://linkedin.com/company/hopektu"')}
+              ></i>
+              <i
+                className="fa-brands fa-youtube nav-icon"
+                onClick={() => openLink('https://www.youtube.com/channel/UCnTT95XELoR38iN8Ax3klzg')}
+              ></i>
+            </div>
           </div>
 
           <input type="submit" value="Send Message" />
         </form>
-
-        {isSubmitted && (
-          <div id="confirmation" style={{ color: 'green', marginTop: '20px' }}>
-            Thank you for reaching out! We will get back to you shortly.
-          </div>
-        )}
       </div>
 
+      {/* Success popup for email success */}
+      {showSuccessPopup && (
+        <div className="success-popup">
+          <div className="success-content">
+            <span className="success-close-btn" onClick={closeSuccessPopup}>×</span>
+            <p>Thank you for reaching out! We will get back to you shortly.&#10003;</p>
+          </div>
+        </div>
+      )}
+
+      {/* Error popup for email failure */}
+      {showErrorPopup && (
+        <div className="error-popup-fail">
+          <div className="error-content-fail">
+            <span className="error-close-btn-fail" onClick={closeErrorPopup}>×</span>
+            <p>Failed to submit. Please try again later or contact hope2025contact@gmail.com</p>
+          </div>
+        </div>
+      )}
+
       <div className="faq-section">
-  <h3>Frequently Asked Questions</h3>
-  
-  <details>
-    <summary>How can I contact support?</summary>
-    <p>You can reach out via the form or email us at hope2025.net@gmail.com.</p>
-  </details>
-
-  <details>
-  <summary>What free resources are available on Hope?</summary>
-  <p>All the materials on Hope, including study notes, official syllabus links, educational videos, and previous year question papers, are completely free for KTU students.</p>
-</details>
-
-<details>
-  <summary>Where can I find study materials?</summary>
-  <p>To find study materials, go to the home page and click on "Explore" or navigate to the "Schemes" section through the footer. Then, select the scheme and the corresponding year/department to access the required materials.</p>
-</details>
-
-<details>
-  <summary>What is CodeXpert, and how is it different from Hope?</summary>
-  <p>CodeXpert is a premium programming training platform run by the same team behind Hope. While Hope offers free study materials, CodeXpert focuses on paid, in-depth programming courses like Python, Java, and Web Development.</p>
-</details>
-
-  <details>
-    <summary>How can I enroll in the CodeXpert course?</summary>
-    <p>Visit the CodeXpert page via the navbar or home page link, navigate to the Enroll page, and fill out the form to enroll.</p>
-  </details>
-
-  <details>
-    <summary>How do I contribute notes to HOPE?</summary>
-    <p>Go to the Contribute to HOPE page via navbar and read the instructions to contribute your notes.</p>
-  </details>
-
-
-</div>
-
+        <h3>Frequently Asked Questions</h3>
+        <details>
+          <summary>How can I contact support?</summary>
+          <p>You can reach out via the form or email us at hope2025.net@gmail.com.</p>
+        </details>
+        <details>
+          <summary>What free resources are available on Hope?</summary>
+          <p>All the materials on Hope, including study notes, official syllabus links, educational videos, and previous year question papers, are completely free for KTU students.</p>
+        </details>
+        <details>
+          <summary>Where can I find study materials?</summary>
+          <p>To find study materials, go to the home page and click on "Explore" or navigate to the "Schemes" section through the footer. Then, select the scheme and the corresponding year/department to access the required materials.</p>
+        </details>
+        <details>
+          <summary>What is CodeXpert, and how is it different from Hope?</summary>
+          <p>CodeXpert is a premium programming training platform run by the same team behind Hope. While Hope offers free study materials, CodeXpert focuses on paid, in-depth programming courses like Python, Java, and Web Development.</p>
+        </details>
+        <details>
+          <summary>How can I enroll in the CodeXpert course?</summary>
+          <p>Visit the CodeXpert page via the navbar or home page link, navigate to the Enroll page, and fill out the form to enroll.</p>
+        </details>
+        <details>
+          <summary>How do I contribute notes to HOPE?</summary>
+          <p>Go to the Contribute to HOPE page via navbar and read the instructions to contribute your notes.</p>
+        </details>
+      </div>
     </section>
   );
 }

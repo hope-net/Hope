@@ -508,11 +508,54 @@ footer hr{
   margin: 10px;
 }
 
-#confirmation {
-  margin-top: 20px;
-  font-size: 18px;
-  color: green;
+/* Success Pop-up Styling for successful email submission */
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Same semi-transparent black background as error */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Success content box */
+.success-content {
+  background-color: rgba(255, 255, 255, 0.8); /* Same background as error (dark semi-transparent) */
+  border-radius: 10px;
+  height: 25%;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Success message text */
+.success-content p {
+  font-size: 1.2rem;
+  color: green; /* Green text for success */
+  margin-top: 20px;
+}
+
+/* Close button for success pop-up */
+.success-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0); /* White close button */
+}
+
+.success-close-btn:hover {
+  color: rgb(255, 0, 0); /* Red on hover */
+}
+
 
 .faq-section {
   margin: 30px auto;
@@ -542,6 +585,56 @@ footer hr{
 .faq-section p {
   margin: 5px 0 0;
 }
+
+/* Error Pop-up Styling for failed email submission */
+.error-popup-fail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Error content box */
+.error-content-fail {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 0.8 transparency */
+  border-radius: 10px;
+  height: 25%;
+  width: 30%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Error message text */
+.error-content-fail p {
+  font-size: 1.2rem;
+  color: red; /* Red text for error */
+  margin-top: 20px;
+}
+
+/* Close button for error pop-up */
+.error-close-btn-fail {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(255, 0, 0); /* Red close button */
+}
+
+.error-close-btn-fail:hover {
+  color: rgb(255, 255, 255); /* White on hover */
+}
+
+
 
 .contribute-container {
   background-color: white;
