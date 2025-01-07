@@ -44,10 +44,10 @@ export default function Contact() {
           <input type="email" id="email" name="email" placeholder="Your email" required />
 
           <label htmlFor="query-type">Query Type:</label>
-          <select id="query-type" name="query-type">
-            <option value="general">General Inquiry</option>
-            <option value="support">Support</option>
-            <option value="feedback">Feedback</option>
+          <select id="query-type" name="query-type" defaultValue={"General Inquiry"}>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Support">Support</option>
+            <option value="Feedback">Feedback</option>
           </select>
 
           <label htmlFor="message">Message:</label>
@@ -89,16 +89,41 @@ export default function Contact() {
       </div>
 
       <div className="faq-section">
-        <h3>Frequently Asked Questions</h3>
-        <details>
-          <summary>How can I contact support?</summary>
-          <p>You can reach out via the form or email us at hope2025.net@gmail.com.</p>
-        </details>
-        <details>
-          <summary>What are your operating hours?</summary>
-          <p>We are available Monday to Friday, 9 AM to 5 PM.</p>
-        </details>
-      </div>
+  <h3>Frequently Asked Questions</h3>
+  
+  <details>
+    <summary>How can I contact support?</summary>
+    <p>You can reach out via the form or email us at hope2025.net@gmail.com.</p>
+  </details>
+
+  <details>
+  <summary>What free resources are available on Hope?</summary>
+  <p>All the materials on Hope, including study notes, official syllabus links, educational videos, and previous year question papers, are completely free for KTU students.</p>
+</details>
+
+<details>
+  <summary>Where can I find study materials?</summary>
+  <p>To find study materials, go to the home page and click on "Explore" or navigate to the "Schemes" section through the footer. Then, select the scheme and the corresponding year/department to access the required materials.</p>
+</details>
+
+<details>
+  <summary>What is CodeXpert, and how is it different from Hope?</summary>
+  <p>CodeXpert is a premium programming training platform run by the same team behind Hope. While Hope offers free study materials, CodeXpert focuses on paid, in-depth programming courses like Python, Java, and Web Development.</p>
+</details>
+
+  <details>
+    <summary>How can I enroll in the CodeXpert course?</summary>
+    <p>Visit the CodeXpert page via the navbar or home page link, navigate to the Enroll page, and fill out the form to enroll.</p>
+  </details>
+
+  <details>
+    <summary>How do I contribute notes to HOPE?</summary>
+    <p>Go to the Contribute to HOPE page via navbar and read the instructions to contribute your notes.</p>
+  </details>
+
+
+</div>
+
     </section>
   );
 }
